@@ -1,0 +1,56 @@
+*faceName: xft:Ricty:pixelsize=42:antialias=true,xft:Noto Sans Mono:pixelsize=42,xft:Fira Code:pixelsize=42,xft:Noto Color Emoji:pixelsize=42,xft:Symbola:pixelsize=42
+*font: xft:Ricty:pixelsize=42:antialias=true,xft:Noto Sans Mono:pixelsize=42,xft:Fira Code:pixelsize=42,xft:Noto Color Emoji:pixelsize=42,xft:Symbola:pixelsize=42
+
+!urxvt*foreground: #D0D0D0
+!urxvt*background: black
+urxvt*saveLines: 100000
+urxvt*scrollBar: false
+
+URxvt*background:   #000000
+URxvt*foreground:   #d0d0d0
+
+URxvt*cursorColor:  #d0d0d0
+
+URxvt*colorBD:      #ffffff
+!URxvt*colorUL:      #4eb4fa
+
+!black
+URxvt*color0:       #000000
+URxvt*color8:       #1c1c1c
+
+!red
+URxvt*color1:       #a00030
+URxvt*color9:       #ff0050
+
+!green
+URxvt*color2:       #66aa11
+URxvt*color10:      #80ff00
+
+!yellow
+URxvt*color3:       #c47f2c
+URxvt*color11:      #ffba68
+
+!blue
+URxvt*color4:       #6060ff
+URxvt*color12:      #5f5fee
+
+!magenta
+URxvt*color5:       #ae40e5
+URxvt*color13:      #bb88dd
+
+!cyan
+URxvt*color6:       #3579a8
+URxvt*color14:      #4eb4fa
+
+!white
+URxvt*color7:       #7f7f7f
+URxvt*color15:      #d0d0d0
+
+
+Xcursor*size: 32
+Xft.dpi: 163
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintful
+Xft.hinting: 1
+Xft.antialias: 1
