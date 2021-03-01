@@ -1,6 +1,11 @@
 # common
 export LANG=ja_JP.UTF-8
 
+path=(
+    $HOME/.local/bin
+    $path
+)
+
 
 # applications
 ## golang
