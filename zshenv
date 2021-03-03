@@ -9,6 +9,7 @@ path=(
 
 # applications
 ## golang
+export GOPATH="$HOME/.go"
 export GOBIN="$HOME/.local/bin"
 
 ## python
