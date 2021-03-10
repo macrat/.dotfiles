@@ -5,6 +5,10 @@ set incsearch ignorecase smartcase nohlsearch
 set sw=4 ts=4 expandtab smartindent
 set scrolloff=0 textwidth=0
 
+set grepprg=rg\ --vimgrep
+nnoremap ]q :cn<CR>
+nnoremap [q :cp<CR>
+
 set fileencodings=utf-8,sjis,euc-jp
 
 
