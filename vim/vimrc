@@ -13,12 +13,12 @@ set fileencodings=utf-8,sjis,euc-jp
 
 
 "==================== styling ==============================
-autocmd ColorScheme * highlight! link SignColumn LineNr
-colorscheme default
+set fillchars=vert:┃
 
-highlight VertSplit cterm=NONE ctermbg=DarkGray ctermfg=DarkGray
-highlight StatusLine cterm=NONE ctermbg=Gray ctermfg=Black
-highlight StatusLineNC cterm=NONE ctermbg=DarkGray ctermfg=White
+highlight! link         SignColumn LineNr
+highlight  VertSplit    cterm=NONE ctermbg=NONE     ctermfg=Gray
+highlight  StatusLine   cterm=NONE ctermbg=Gray     ctermfg=Black
+highlight  StatusLineNC cterm=NONE ctermbg=DarkGray ctermfg=White
 
 
 "==================== data directory ==============================
@@ -39,11 +39,11 @@ let g:netrw_home = DATADIR
 
 
 "==================== file type ==============================
-autocmd FileType go,make setlocal noexpandtab
-autocmd FileType python setlocal colorcolumn=80 suffixesadd=.py
-autocmd FileType markdown,vim,json,yaml,toml setlocal ts=2 sw=2
+autocmd FileType go,make                        setlocal noexpandtab
+autocmd FileType python                         setlocal colorcolumn=80 suffixesadd=.py
+autocmd FileType markdown,vim,json,yaml,toml    setlocal ts=2 sw=2
 autocmd FileType javascript,javascriptreact,vue setlocal colorcolumn=100 suffixesadd=.js,.jsx,.vue
-autocmd FileType typescript,typescriptreact setlocal colorcolumn=100 suffixesadd=.ts,.tsx
+autocmd FileType typescript,typescriptreact     setlocal colorcolumn=100 suffixesadd=.ts,.tsx
 
 
 "==================== vim-gitgutter ==============================
