@@ -59,7 +59,7 @@ noremap \| :Tabularize /\|/l0<CR>
 noremap \: :Tabularize /^.\{-}:\zs/l0l1<CR>
 noremap \= :Tabularize /^.\{-}\zs=/l1<CR>
 noremap \, :Tabularize /,\zs/l0l1<CR>
-noremap \<Space> :Tabularize / /l0<CR>
+noremap \<Space> :Tabularize /[^ ]\+\zs /l0<CR>
 
 ounmap \|
 ounmap \:
