@@ -52,3 +52,17 @@ set signcolumn=yes updatetime=100
 
 "==================== vim-gfm-syntax ==============================
 let g:markdown_fenced_languages=['go', 'python', 'javascript', 'typescript', 'bash']
+
+
+"==================== Tabular ==============================
+noremap \| :Tabularize /\|/l0<CR>
+noremap \: :Tabularize /^.\{-}:\zs/l0l1<CR>
+noremap \= :Tabularize /^.\{-}\zs=/l1<CR>
+noremap \, :Tabularize /,\zs/l0l1<CR>
+noremap \<Space> :Tabularize / /l0<CR>
+
+ounmap \|
+ounmap \:
+ounmap \=
+ounmap \,
+ounmap \<Space>
