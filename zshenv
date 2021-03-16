@@ -1,9 +1,15 @@
 # common
 export LANG=ja_JP.UTF-8
 
+path=(
+    $HOME/.local/bin
+    $path
+)
+
 
 # applications
 ## golang
+export GOPATH="$HOME/.go"
 export GOBIN="$HOME/.local/bin"
 
 ## python
