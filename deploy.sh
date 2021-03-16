@@ -12,6 +12,8 @@ ln $OPTS $PWD/zshenv ~/.zshenv
 
 ln $OPTS $PWD/vim ~/.vim
 
+ln $OPTS $PWD/tmux.conf ~/.tmux.conf
+
 if [[ $(uname) = 'Linux' ]]; then
     ln $OPTS $PWD/Xdefaults ~/.Xdefaults
 fi
