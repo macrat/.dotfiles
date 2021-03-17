@@ -13,7 +13,7 @@ set fileencodings=utf-8,sjis,euc-jp
 
 
 "==================== styling ==============================
-set fillchars=vert:┃
+set fillchars=vert:│
 
 highlight! link         SignColumn LineNr
 highlight  VertSplit    cterm=NONE ctermbg=NONE     ctermfg=Gray
