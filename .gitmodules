@@ -13,3 +13,6 @@
 [submodule "vim/pack/common/start/tabular"]
 	path = vim/pack/common/start/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "vim/pack/common/start/vim-gnupg"]
+	path = vim/pack/common/start/vim-gnupg
+	url = https://github.com/jamessan/vim-gnupg.git
