@@ -16,9 +16,9 @@
 [submodule "vim/pack/common/start/vim-gnupg"]
 	path = vim/pack/common/start/vim-gnupg
 	url = https://github.com/jamessan/vim-gnupg.git
-[submodule "vim/pack/common/start/previm"]
-	path = vim/pack/common/start/previm
-	url = https://github.com/previm/previm.git
 [submodule "vim/pack/common/start/vim-fugitive"]
 	path = vim/pack/common/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/common/start/previm"]
+	path = vim/pack/common/start/previm
+	url = https://github.com/previm/previm.git
