@@ -28,6 +28,7 @@ setopt magic_equal_subst
 chpwd() {
     print -nP "\e]2;%n@%m:%~\a"
 }
+chpwd
 
 ## etc
 setopt extendedglob
