@@ -20,6 +20,11 @@ highlight  VertSplit    cterm=NONE ctermbg=NONE     ctermfg=Gray
 highlight  StatusLine   cterm=NONE ctermbg=Gray     ctermfg=Black
 highlight  StatusLineNC cterm=NONE ctermbg=DarkGray ctermfg=White
 
+" true color support
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 
 "==================== data directory ==============================
 let DATADIR = expand('$XDG_RUNTIME_DIR/vim')
