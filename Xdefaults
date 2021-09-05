@@ -57,3 +57,7 @@ Xft.antialias: 1
 
 URxvt.transparent: true
 URxvt.shading: 15
+
+XRxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
