@@ -1,5 +1,4 @@
 # common
-export LANG=ja_JP.UTF-8
 
 typeset -U path
 path=(
