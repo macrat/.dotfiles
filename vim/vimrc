@@ -68,7 +68,7 @@ let g:polyglot_disabled = ['markdown']
 "==================== Tabular ==============================
 let g:no_default_tabular_maps=1
 
-noremap \| :Tabularize /\|/l0<CR>
+noremap \| :Tabularize /\|/l1<CR>
 noremap \: :Tabularize /^.\{-}:\zs/l0l1<CR>
 noremap \= :Tabularize /^.\{-}\zs=/l1<CR>
 noremap \, :Tabularize /,\zs/l0l1<CR>
