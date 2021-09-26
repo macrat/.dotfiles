@@ -61,6 +61,10 @@ let g:gfm_syntax_highlight_mention=0
 let g:gfm_syntax_highlight_issue_number=0
 
 
+"==================== vim-gfm-syntax ==============================
+let g:polyglot_disabled = ['markdown']
+
+
 "==================== Tabular ==============================
 let g:no_default_tabular_maps=1
 
