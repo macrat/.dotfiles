@@ -81,6 +81,10 @@ ounmap \,
 ounmap \<Space>
 
 
+"==================== Tabular ==============================
+let g:table_mode_corner = '|'
+
+
 "==================== local vimrc ==============================
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
