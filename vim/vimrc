@@ -82,6 +82,7 @@ let g:table_mode_corner = '|'
 
 
 "==================== vim-lsp / vim-lsp-settings ==============================
+autocmd User lsp_buffer_enabled if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
 autocmd User lsp_buffer_enabled setlocal omnifunc=lsp#complete
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_diagnostics_echo_delay = 100
