@@ -27,20 +27,20 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 
 "==================== data directory ==============================
-let DATADIR = expand('$XDG_RUNTIME_DIR/vim')
-if DATADIR == "/vim"
-  let DATADIR = expand("/tmp/$USER/vim")
+let s:datadir = expand('$XDG_RUNTIME_DIR/vim')
+if s:datadir == "/vim"
+  let s:datadir = expand("/tmp/$USER/vim")
 endif
 
 set undofile
-let &undodir = DATADIR . '/undo'
+let &undodir = s:datadir . '/undo'
 if !isdirectory(&undodir)
   call mkdir(&undodir, 'p')
 endif
 
 set nobackup
 
-let g:netrw_home = DATADIR
+let g:netrw_home = s:datadir
 
 
 "==================== file type ==============================
