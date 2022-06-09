@@ -90,8 +90,17 @@ case $(uname) in
 esac
 
 
-# command shorthands
-alias vi='vim'
+# application settings
+function flattenvim() {
+    if [ "${VIM_INSTANCE_NAME}" != "" ]; then
+        vim --servername ${VIM_INSTANCE_NAME} --remote $*
+    else
+        instance_name="$(head -c 12 /dev/random | base64)"
+        VIM_INSTANCE_NAME="${instance_name}" vim --servername "${instance_name}" $*
+    fi
+}
+alias vi=flattenvim
+alias vim=flattenvim
 
 
 # local settings

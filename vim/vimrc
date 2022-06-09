@@ -52,6 +52,11 @@ autocmd FileType javascript,javascriptreact,vue setlocal colorcolumn=100 suffixe
 autocmd FileType typescript,typescriptreact     setlocal colorcolumn=100 suffixesadd=.ts,.tsx
 
 
+"==================== file type ==============================
+set termwinkey=<C-L>
+tnoremap <Esc> <C-\><C-n>
+
+
 "==================== vim-gitgutter ==============================
 set signcolumn=yes updatetime=100
 
