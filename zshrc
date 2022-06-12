@@ -96,17 +96,16 @@ if [ "${VIM_SERVERNAME}" != "" ]; then
         \vim --servername ${VIM_SERVERNAME} --remote-send "<C-l>$*<CR>"
     }
     function cd() {
-        builtin cd $* && vnorm :cd "$(pwd)"
+        builtin cd $* && vnorm :lcd "$(pwd)"
     }
 fi
 function flattenvim() {
     if [ "${VIM_SERVERNAME}" = "" ]; then
         \vim --servername "$(head -c 12 /dev/random | base64)" $*
     elif [ "$*" != "" ]; then
-        vnorm '<Esc>'
         \vim --servername ${VIM_SERVERNAME} --remote $*
     else
-        \vnorm '<Esc>:new'
+        \vnorm ':new'
     fi
 }
 alias vi=flattenvim
