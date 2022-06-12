@@ -1,4 +1,4 @@
-"==================== common ==============================
+" ========= common ====================
 syntax on
 filetype plugin indent on
 set incsearch ignorecase smartcase nohlsearch
@@ -6,14 +6,27 @@ set sw=4 ts=4 expandtab smartindent
 set scrolloff=0 textwidth=0
 set nrformats=bin,hex formatoptions+=mM
 
+set fileencodings=utf-8,sjis,euc-jp
+
+" :grep
 set grepprg=rg\ --vimgrep
 nnoremap ]q :cn<CR>
 nnoremap [q :cp<CR>
 
-set fileencodings=utf-8,sjis,euc-jp
+" :term
+set termwinkey=<C-L>
+tnoremap <Esc> <C-\><C-n>
 
 
-"==================== styling ==============================
+" ========= file types ====================
+autocmd FileType go,make                        setlocal noexpandtab
+autocmd FileType python                         setlocal colorcolumn=80 suffixesadd=.py
+autocmd FileType markdown,vim,json,yaml,toml    setlocal ts=2 sw=2
+autocmd FileType javascript,javascriptreact,vue setlocal colorcolumn=100 suffixesadd=.js,.jsx,.vue
+autocmd FileType typescript,typescriptreact     setlocal colorcolumn=100 suffixesadd=.ts,.tsx
+
+
+" ========= styling ====================
 set fillchars=vert:│
 
 highlight! link         SignColumn LineNr
@@ -21,13 +34,13 @@ highlight  VertSplit    cterm=NONE ctermbg=NONE     ctermfg=Gray
 highlight  StatusLine   cterm=NONE ctermbg=Gray     ctermfg=Black
 highlight  StatusLineNC cterm=NONE ctermbg=DarkGray ctermfg=White
 
-" true color support
+" enable true color
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 
-"==================== data directory ==============================
+" ========= data directory ====================
 let s:datadir = expand('$XDG_RUNTIME_DIR/vim')
 if s:datadir == "/vim"
   let s:datadir = expand("/tmp/$USER/vim")
@@ -44,30 +57,17 @@ set nobackup
 let g:netrw_home = s:datadir
 
 
-"==================== file type ==============================
-autocmd FileType go,make                        setlocal noexpandtab
-autocmd FileType python                         setlocal colorcolumn=80 suffixesadd=.py
-autocmd FileType markdown,vim,json,yaml,toml    setlocal ts=2 sw=2
-autocmd FileType javascript,javascriptreact,vue setlocal colorcolumn=100 suffixesadd=.js,.jsx,.vue
-autocmd FileType typescript,typescriptreact     setlocal colorcolumn=100 suffixesadd=.ts,.tsx
-
-
-"==================== terminal ==============================
-set termwinkey=<C-L>
-tnoremap <Esc> <C-\><C-n>
-
-
-"==================== vim-gitgutter ==============================
+" ========= vim-gitgutter ====================
 set signcolumn=yes updatetime=100
 
 
-"==================== vim-gfm-syntax ==============================
+" ========= vim-gfm-syntax ====================
 let g:markdown_fenced_languages=['go', 'python', 'javascript', 'typescript', 'bash']
 let g:gfm_syntax_highlight_mention=0
 let g:gfm_syntax_highlight_issue_number=0
 
 
-"==================== Tabular ==============================
+" ========= Tabular ====================
 let g:no_default_tabular_maps=1
 
 noremap \| :Tabularize /\|/l1<CR>
@@ -83,11 +83,11 @@ ounmap \,
 ounmap \<Space>
 
 
-"==================== vim-table-mode ==============================
+" ========= vim-table-mode ====================
 let g:table_mode_corner = '|'
 
 
-"==================== vim-lsp / vim-lsp-settings ==============================
+" ========= vim-lsp ====================
 autocmd User lsp_buffer_enabled if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
 autocmd User lsp_buffer_enabled setlocal omnifunc=lsp#complete
 let g:lsp_diagnostics_float_cursor           = 1
@@ -105,7 +105,7 @@ nnoremap [e :LspPreviousDiagnostic<CR>
 let g:lsp_settings_enable_suggestions = 0
 
 
-"==================== local vimrc ==============================
+" ========= load local vimrc ====================
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
