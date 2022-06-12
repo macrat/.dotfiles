@@ -16,6 +16,7 @@ nnoremap [q :cp<CR>
 " :term
 set termwinkey=<C-L>
 tnoremap <Esc> <C-\><C-n>
+autocmd TerminalOpen * setlocal bufhidden=hide
 
 
 " ========= file types ====================

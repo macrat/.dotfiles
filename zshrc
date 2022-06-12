@@ -103,9 +103,9 @@ function flattenvim() {
     if [ "${VIM_SERVERNAME}" = "" ]; then
         \vim --servername "$(head -c 12 /dev/random | base64)" $*
     elif [ "$*" != "" ]; then
-        \vim --servername ${VIM_SERVERNAME} --remote $*
+        vnorm :args "$@"
     else
-        \vnorm ':new'
+        vnorm :enew
     fi
 }
 alias vi=flattenvim
