@@ -91,23 +91,25 @@ esac
 
 
 # application settings
-if [ "${VIM_SERVERNAME}" != "" ]; then 
-    function vnorm() {
-        \vim --servername ${VIM_SERVERNAME} --remote-send "<C-l>$*<CR>"
+if [ "${VIM_SERVERNAME}" = "" ]; then 
+    function flattenvim() {
+        \vim --servername "$(head -c 12 /dev/random | base64)" $*
+    }
+else
+    function vimdo() {
+        \vim --servername ${VIM_SERVERNAME} --remote-send "<C-l>:$*<CR>"
     }
     function cd() {
-        builtin cd $* && vnorm :lcd "$(pwd)"
+        builtin cd $* && vimdo lcd "$(pwd)"
+    }
+    function flattenvim() {
+        if [ "$*" != "" ]; then
+            vimdo args "$@"
+        else
+            vimdo enew
+        fi
     }
 fi
-function flattenvim() {
-    if [ "${VIM_SERVERNAME}" = "" ]; then
-        \vim --servername "$(head -c 12 /dev/random | base64)" $*
-    elif [ "$*" != "" ]; then
-        vnorm :args "$@"
-    else
-        vnorm :enew
-    fi
-}
 alias vi=flattenvim
 alias vim=flattenvim
 
