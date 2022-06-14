@@ -3,15 +3,15 @@
 bindkey -e
 setopt no_flow_control
 
-bindkey "^[[3~" delete-char
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[4~" end-of-line
+bindkey '^[[3~' delete-char
+bindkey '^[[1~' beginning-of-line
+bindkey '^[[4~' end-of-line
 
 ## history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=100000
-HISTORY_IGNORE="(fg*|bg*|ls|la|ll|l|cd|vi|vim|exit)"
+HISTORY_IGNORE='(fg*|bg*|ls|la|ll|l|cd|vi|vim|exit)'
 setopt hist_ignore_all_dups hist_save_no_dups hist_find_no_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
@@ -91,19 +91,19 @@ esac
 
 
 # application settings
-if [ "${VIM_SERVERNAME}" = "" ]; then 
+if [ "${VIM_SERVERNAME}" = '' ]; then 
     function flattenvim() {
         \vim --servername "$(head -c 12 /dev/random | base64)" $*
     }
 else
     function vimdo() {
-        \vim --servername ${VIM_SERVERNAME} --remote-send "<C-l>:$*<CR>"
+        \vim --servername "${VIM_SERVERNAME}" --remote-send "<C-l>:$*<CR>"
     }
     function cd() {
-        builtin cd $* && vimdo lcd "$(pwd)"
+        builtin cd "$*" && vimdo lcd "$(pwd)"
     }
     function flattenvim() {
-        if [ "$*" != "" ]; then
+        if [ "$*" != '' ]; then
             vimdo args "$@"
         else
             vimdo enew
