@@ -30,7 +30,7 @@ autocmd FileType typescript,typescriptreact     setlocal colorcolumn=100 suffixe
 " ========= styling ====================
 set fillchars=vert:│
 
-highlight! link    SignColumn LineNr
+highlight! link SignColumn LineNr
 autocmd FileType markdown highlight! Conceal guifg=DarkCyan guibg=NONE
 
 " enable true color
