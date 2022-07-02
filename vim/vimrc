@@ -30,15 +30,16 @@ autocmd FileType typescript,typescriptreact     setlocal colorcolumn=100 suffixe
 " ========= styling ====================
 set fillchars=vert:│
 
-highlight! link         SignColumn LineNr
-highlight  VertSplit    cterm=NONE ctermbg=NONE     ctermfg=Gray
-highlight  StatusLine   cterm=NONE ctermbg=Gray     ctermfg=Black
-highlight  StatusLineNC cterm=NONE ctermbg=DarkGray ctermfg=White
+highlight! link    SignColumn LineNr
+autocmd FileType markdown highlight! Conceal guifg=DarkCyan guibg=NONE
 
 " enable true color
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" disable conceal of markdown syntax
+let g:markdown_syntax_conceal = 0
 
 
 " ========= data directory ====================
