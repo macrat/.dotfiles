@@ -20,18 +20,17 @@ autocmd TerminalOpen * setlocal bufhidden=hide
 
 
 " ========= file types ====================
-autocmd FileType go,make                        setlocal noexpandtab
-autocmd FileType python                         setlocal colorcolumn=80 suffixesadd=.py
-autocmd FileType markdown,vim,json,yaml,toml    setlocal shiftwidth=2 tabstop=2
-autocmd FileType javascript,javascriptreact,vue setlocal colorcolumn=100 suffixesadd=.js,.jsx,.vue
-autocmd FileType typescript,typescriptreact     setlocal colorcolumn=100 suffixesadd=.ts,.tsx
+au FileType go,make                    setl noet
+au FileType python                     setl cc=80 sua=.py
+au FileType vim,json,yaml,toml         setl sw=2 ts=2
+au FileType javascript,javascriptreact setl cc=100 sua=.js,.jsx,.ts,.tsx
+au FileType typescript,typescriptreact setl cc=100 sua=.ts,.tsx,.js,.jsx
+au FileType vue                        setl cc=100 sua=.vue,.ts,.js
+au FileType markdown                   setl sw=2 ts=2 sua=.md,.txt|hi! Conceal guifg=DarkCyan guibg=NONE
 
 
 " ========= styling ====================
 set fillchars=vert:│
-
-highlight! link SignColumn LineNr
-autocmd FileType markdown highlight! Conceal guifg=DarkCyan guibg=NONE
 
 " enable true color
 set termguicolors
@@ -115,3 +114,5 @@ let g:ctrlp_working_path_mode = ""  " disable project root finder
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" vim:ft=vim:sw=2:ts=2:et:cc=100
