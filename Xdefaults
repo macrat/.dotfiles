@@ -1,51 +1,31 @@
 *faceName: xft:Ricty:pixelsize=42:antialias=true,xft:Noto Sans Mono:pixelsize=42,xft:Fira Code:pixelsize=42,xft:Noto Color Emoji:pixelsize=42,xft:Symbola:pixelsize=42
 *font: xft:Ricty:pixelsize=42:antialias=true,xft:Noto Sans Mono:pixelsize=42,xft:Fira Code:pixelsize=42,xft:Noto Color Emoji:pixelsize=42,xft:Symbola:pixelsize=42
 
-!urxvt*foreground: #D0D0D0
-!urxvt*background: black
 urxvt*saveLines: 100000
 urxvt*scrollBar: false
 
-URxvt*background:   #000000
-URxvt*foreground:   #d0d0d0
+*.foreground:   #D8DEE9
+*.background:   #2E3440
+*.cursorColor:  #D8DEE9
+*.fading: 35
+*.fadeColor: #4C566A
 
-URxvt*cursorColor:  #d0d0d0
-
-URxvt*colorBD:      #ffffff
-!URxvt*colorUL:      #4eb4fa
-
-!black
-URxvt*color0:       #000000
-URxvt*color8:       #1c1c1c
-
-!red
-URxvt*color1:       #a00030
-URxvt*color9:       #ff0050
-
-!green
-URxvt*color2:       #66aa11
-URxvt*color10:      #80ff00
-
-!yellow
-URxvt*color3:       #c47f2c
-URxvt*color11:      #ffba68
-
-!blue
-URxvt*color4:       #6060ff
-URxvt*color12:      #5f5fee
-
-!magenta
-URxvt*color5:       #ae40e5
-URxvt*color13:      #bb88dd
-
-!cyan
-URxvt*color6:       #3579a8
-URxvt*color14:      #4eb4fa
-
-!white
-URxvt*color7:       #7f7f7f
-URxvt*color15:      #d0d0d0
-
+*.color0:  #3B4252
+*.color1:  #BF616A
+*.color2:  #A3BE8C
+*.color3:  #EBCB8B
+*.color4:  #81A1C1
+*.color5:  #B48EAD
+*.color6:  #88C0D0
+*.color7:  #E5E9F0
+*.color8:  #4C566A
+*.color9:  #BF616A
+*.color10: #A3BE8C
+*.color11: #EBCB8B
+*.color12: #81A1C1
+*.color13: #B48EAD
+*.color14: #8FBCBB
+*.color15: #ECEFF4
 
 Xcursor*size: 32
 Xft.dpi: 163
@@ -54,9 +34,6 @@ Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintful
 Xft.hinting: 1
 Xft.antialias: 1
-
-!URxvt.transparent: true
-!URxvt.shading: 15
 
 XRxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
