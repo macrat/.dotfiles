@@ -10,6 +10,9 @@ fi
 ln $OPTS $PWD/zshrc ~/.zshrc
 ln $OPTS $PWD/zshenv ~/.zshenv
 
+ln $OPTS $PWD/gitconfig ~/.gitconfig
+ln $OPTS $PWD/gitignore ~/.gitignore
+
 ln $OPTS $PWD/vim ~/.vim
 
 ln $OPTS $PWD/tmux.conf ~/.tmux.conf

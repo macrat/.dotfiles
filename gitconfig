@@ -1,0 +1,31 @@
+[user]
+	email = m@crat.jp
+	name = MacRat
+	signingkey = 4D1C751C913752EA375CC0F6F8E720285595DCDB
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+	quotepath = false
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[diff "gpg"]
+    textconv = gpg -d -o -
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgsign = true
+[merge]
+	tool = vimdiff
+[pager]
+	branch = false
+	tag = false
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
