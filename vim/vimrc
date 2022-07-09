@@ -30,7 +30,7 @@ au FileType markdown                   setl sw=2 ts=2 sua=.md,.txt|hi! Conceal g
 
 
 " ========= styling ====================
-set fillchars=vert:│
+set ruler fillchars=vert:│
 
 " enable true color
 set termguicolors
