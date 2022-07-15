@@ -1,0 +1,3 @@
+diary	diary.txt	/*diary*
+diary.txt	diary.txt	/*diary.txt*
+g:diary_headers	diary.txt	/*g:diary_headers*
