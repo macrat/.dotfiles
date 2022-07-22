@@ -1,6 +1,6 @@
 vim9script
 
-def InsertHeader()
+export def InsertHeader()
   append(0, "---")
   append(1, "title: " .. substitute(expand("%:t:r"), "^20[0-9]\\{6\\}\\(\\.[0-9]*\\)\\?_", "", ""))
   append(2, "date: " .. strftime("%Y-%m-%d %H:%M-"))
@@ -13,5 +13,3 @@ def InsertHeader()
     endfor
   endif
 enddef
-
-autocmd BufNewFile */diary/20[0-9]\\\{6,6\}*_*.md InsertHeader()

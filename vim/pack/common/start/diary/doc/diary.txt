@@ -1,11 +1,11 @@
 *diary.txt* Make a diary page
 
-    #####  ###   ##   #####  #   # 
-    #    #  #   #  #  #    #  # #  
-    #    #  #  #    # #    #   #   
-    #    #  #  ###### #####    #   
-    #    #  #  #    # #   #    #   
-    #####  ### #    # #    #   #   
+    #####  ###   ##   #####  #   #
+    #    #  #   #  #  #    #  # #
+    #    #  #  #    # #    #   #
+    #    #  #  ###### #####    #
+    #    #  #  #    # #   #    #
+    #####  ### #    # #    #   #
 									*diary*
 ==============================================================================
 
@@ -19,9 +19,13 @@ The frontmatter is like below.
 	date: 2001-02-03 16:05-
 	---
 
+Set |:autocmd| to call *diary#InsertHeader()* when create a diary page.
+>
+	au BufNewFile */diary/20[0-9]\\\{6,6\}*_*.md cal diary#InsertHeader()
+<
 To add extra properties under date property, use *g:diary_headers* variable.
-
+>
 	let g:diary_headers = { "hello":"world" }
-
+<
 ==============================================================================
 vim:tw=78:isk=!-~,^*,^\|,^\":ts=8:noet:ft=help:norl:

@@ -58,6 +58,10 @@ set nobackup
 let g:netrw_home = datadir
 
 
+" ========= diary ====================
+au BufNewFile */diary/20[0-9]\\\{6,6\}*_*.md cal diary#InsertHeader()
+
+
 " ========= vim-gitgutter ====================
 set signcolumn=yes updatetime=500
 
@@ -114,5 +118,6 @@ let g:ctrlp_working_path_mode = ""  " disable project root finder
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
 
 " vim:ft=vim:sw=2:ts=2:et:cc=100
