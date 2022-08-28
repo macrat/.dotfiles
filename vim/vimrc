@@ -67,7 +67,7 @@ set signcolumn=yes updatetime=500
 
 
 " ========= vim-gfm-syntax ====================
-let g:markdown_fenced_languages = ["go", "python", "html", "css", "javascript", "typescript", "bash"]
+let g:markdown_fenced_languages = ["go", "python", "html", "css", "javascript", "typescript", "json", "bash"]
 let g:gfm_syntax_highlight_mention = 0
 let g:gfm_syntax_highlight_issue_number = 0
 
