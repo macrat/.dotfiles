@@ -114,6 +114,12 @@ let g:lsp_settings_enable_suggestions = 0
 let g:ctrlp_working_path_mode = ""  " disable project root finder
 
 
+" ========= ctrl-p ====================
+autocmd BufNewFile,BufRead *.csv set filetype=rfc_csv
+let g:disable_rainbow_csv_autodetect = 1
+let g:rcsv_colorpairs = [['white', 'white'], ['gray', 'gray'], ['lightblue', 'lightblue'], ['gray', 'gray'], ['lightyellow', 'lightyellow'], ['gray', 'gray'], ['lightcyan', 'lightcyan'], ['gray', 'gray'], ['white', 'white'], ['gray', 'gray'], ['lightblue', 'lightblue'], ['gray', 'gray'], ['lightyellow', 'lightyellow'], ['gray', 'gray'], ['lightcyan', 'lightcyan'], ['gray', 'gray'], ['white', 'white'], ['gray', 'gray'], ['lightblue', 'lightblue'], ['gray', 'gray'], ['lightyellow', 'lightyellow'], ['gray', 'gray'], ['lightcyan', 'lightcyan'], ['gray', 'gray']]
+
+
 " ========= load local vimrc ====================
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
