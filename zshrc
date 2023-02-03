@@ -91,11 +91,7 @@ esac
 
 
 # application settings
-if [ "${VIM_SERVERNAME}" = '' ]; then 
-    function flattenvim() {
-        \vim --servername "$(head -c 12 /dev/random | base64)" $*
-    }
-else
+if [ "${VIM_SERVERNAME}" != '' ]; then 
     function vimdo() {
         \vim --servername "${VIM_SERVERNAME}" --remote-send "<C-l>:$*<CR>"
     }
@@ -109,9 +105,9 @@ else
             vimdo enew
         fi
     }
+    alias vi=flattenvim
+    alias vim=flattenvim
 fi
-alias vi=flattenvim
-alias vim=flattenvim
 
 
 # local settings
