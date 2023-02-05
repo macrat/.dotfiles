@@ -52,7 +52,7 @@ zstyle ':vcs_info:*' actionformats '%K{240} %b %B%K{1} %a %k'
 
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 function +vi-git-untracked() {
-    if [[ -n "$(git ls-files --others --exclude-standard)" ]]; then
+    if [[ -n "$(git ls-files --others --exclude-standard 2>/dev/null)" ]]; then
         hook_com[misc]='%F{196}+untracked'
     fi
 }
