@@ -98,15 +98,16 @@ if [ "${VIM_SERVERNAME}" != '' ]; then
     function cd() {
         builtin cd "$*" && vimdo lcd "$(pwd)"
     }
-    function flattenvim() {
+    function flatvim() {
         if [ "$*" != '' ]; then
             vimdo args "$@"
         else
             vimdo enew
         fi
     }
-    alias vi=flattenvim
-    alias vim=flattenvim
+    alias vi=flatvim
+    alias vim=flatvim
+    trap 'vimdo "setl bufhidden="' EXIT
 fi
 
 
