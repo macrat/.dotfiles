@@ -1,4 +1,0 @@
-diary	diary.txt	/*diary*
-diary#InsertHeader()	diary.txt	/*diary#InsertHeader()*
-diary.txt	diary.txt	/*diary.txt*
-g:diary_headers	diary.txt	/*g:diary_headers*

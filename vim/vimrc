@@ -58,10 +58,6 @@ set nobackup
 let g:netrw_home = datadir
 
 
-" ========= diary ====================
-au BufNewFile */diary/20[0-9]\\\{6,6\}*_*.md cal diary#InsertHeader()
-
-
 " ========= vim-gitgutter ====================
 set signcolumn=yes updatetime=500
 
