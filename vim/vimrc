@@ -14,9 +14,13 @@ nnoremap ]q :cn<CR>
 nnoremap [q :cp<CR>
 
 " :term
-set termwinkey=<C-L>
 tnoremap <Esc> <C-\><C-n>
-autocmd TerminalOpen * setlocal bufhidden=hide
+if has('nvim')
+  autocmd TermOpen * setlocal bufhidden=hide
+else
+  set termwinkey=<C-L>
+  autocmd TerminalOpen * setlocal bufhidden=hide
+endif
 
 
 " ========= file types ====================
@@ -47,15 +51,17 @@ if datadir == "/vim"
   let datadir = expand("/tmp/$USER/vim")
 endif
 
-set undofile
-let &undodir = datadir .. "/undo"
-if !isdirectory(&undodir)
-  call mkdir(&undodir, "p")
+if !has('nvim')
+  set undofile
+  let &undodir = datadir .. "/undo"
+  if !isdirectory(&undodir)
+    call mkdir(&undodir, "p")
+  endif
+
+  let g:netrw_home = datadir
 endif
 
 set nobackup
-
-let g:netrw_home = datadir
 
 
 " ========= vim-gitgutter ====================
