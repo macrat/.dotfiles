@@ -30,6 +30,7 @@ au FileType vim,json,yaml,toml         setl sw=2 ts=2
 au FileType javascript,javascriptreact setl cc=100 sua=.js,.jsx,.ts,.tsx
 au FileType typescript,typescriptreact setl cc=100 sua=.ts,.tsx,.js,.jsx
 au FileType vue                        setl cc=100 sua=.vue,.ts,.js
+au FileType svelte                     setl sw=2 ts=2 sua=.js,.ts
 au FileType markdown                   setl sw=2 ts=2 sua=.md,.txt|hi! Conceal guifg=DarkCyan guibg=NONE
 
 
