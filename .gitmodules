@@ -40,3 +40,6 @@
 [submodule "rainbow-csv"]
 	path = vim/pack/common/start/rainbow_csv
 	url = https://github.com/mechatroner/rainbow_csv.git
+[submodule "copilot.vim"]
+	path = vim/pack/common/start/copilot.vim
+	url = https://github.com/github/copilot.vim.git
