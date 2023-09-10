@@ -116,5 +116,11 @@ if [ "${VIM_SERVERNAME}" != '' ]; then
 fi
 
 
+# local path
+if [ -e ~/.local/bin ]; then
+    export PATH=~/.local/bin:$PATH
+fi
+
+
 # local settings
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

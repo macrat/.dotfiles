@@ -20,3 +20,6 @@ ln $OPTS $PWD/tmux.conf ~/.tmux.conf
 if [[ $(uname) = 'Linux' ]]; then
     ln $OPTS $PWD/Xdefaults ~/.Xdefaults
 fi
+
+mkdir -p ~/.config/wezterm
+ln $OPTS $PWD/wezterm.lua ~/.config/wezterm/wezterm.lua
