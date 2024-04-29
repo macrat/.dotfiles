@@ -8,7 +8,7 @@ return {
         'Noto Emoji',
     },
     font_size = 30.0,
-    use_ime = true,
+    --use_ime = true,
 
     color_scheme = 'nord',
     window_padding = {
