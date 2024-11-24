@@ -43,3 +43,33 @@
 [submodule "copilot.vim"]
 	path = vim/pack/common/start/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+[submodule "nvim/pack/common/start/obsidian.nvim"]
+	path = nvim/pack/common/start/obsidian.nvim
+	url = https://github.com/epwalsh/obsidian.nvim
+[submodule "nvim/pack/common/start/plenary.nvim"]
+	path = nvim/pack/common/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "nvim/pack/common/start/nvim-cmp"]
+	path = nvim/pack/common/start/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp
+[submodule "nvim/pack/common/start/telescope.nvim"]
+	path = nvim/pack/common/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule "nvim/pack/common/start/nvim-treesitter"]
+	path = nvim/pack/common/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "nvim/pack/common/start/oil.nvim"]
+	path = nvim/pack/common/start/oil.nvim
+	url = https://github.com/stevearc/oil.nvim
+[submodule "nvim/pack/common/start/mini.nvim"]
+	path = nvim/pack/common/start/mini.nvim
+	url = https://github.com/echasnovski/mini.nvim
+[submodule "nvim/pack/common/start/nvim-lspconfig"]
+	path = nvim/pack/common/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig
+[submodule "nvim/pack/common/start/copilot.vim"]
+	path = nvim/pack/common/start/copilot.vim
+	url = https://github.com/github/copilot.vim
+[submodule "nvim/pack/common/start/CopilotChat.nvim"]
+	path = nvim/pack/common/start/CopilotChat.nvim
+	url = https://github.com/CopilotC-Nvim/CopilotChat.nvim
