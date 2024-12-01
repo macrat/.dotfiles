@@ -81,11 +81,11 @@ require('CopilotChat').setup{}
 ---------- Tabular ----------
 vim.g.no_default_tabular_maps = 1
 
-vim.keymap.set({'n', 'v'}, [[\|]], [[<Cmd>Tabularize /\|/l1<CR>]])
-vim.keymap.set({'n', 'v'}, [[\:]], [[<Cmd>Tabularize /^.\{-}:\zs/l0l1<CR>]])
-vim.keymap.set({'n', 'v'}, [[\=]], [[<Cmd>Tabularize /^.\{-}\zs=/l1<CR>]])
-vim.keymap.set({'n', 'v'}, [[\,]], [[<Cmd>Tabularize /,\zs/l0l1<CR>]])
-vim.keymap.set({'n', 'v'}, [[\<Space>]], [[<Cmd>Tabularize /[^ ]\+\zs /l0<CR>]])
+vim.keymap.set({'n', 'v'}, [[\|]], [[:Tabularize /\|/l1<CR>]])
+vim.keymap.set({'n', 'v'}, [[\:]], [[:Tabularize /^.\{-}:\zs/l0l1<CR>]])
+vim.keymap.set({'n', 'v'}, [[\=]], [[:Tabularize /^.\{-}\zs=/l1<CR>]])
+vim.keymap.set({'n', 'v'}, [[\,]], [[:Tabularize /,\zs/l0l1<CR>]])
+vim.keymap.set({'n', 'v'}, [[\<Space>]], [[:Tabularize /[^ ]\+\zs /l0<CR>]])
 
 
 ---------- local vimrc ----------
