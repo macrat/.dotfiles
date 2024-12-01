@@ -73,3 +73,6 @@
 [submodule "nvim/pack/common/start/CopilotChat.nvim"]
 	path = nvim/pack/common/start/CopilotChat.nvim
 	url = https://github.com/CopilotC-Nvim/CopilotChat.nvim
+[submodule "nvim/pack/common/start/tabular"]
+	path = nvim/pack/common/start/tabular
+	url = https://github.com/godlygeek/tabular.git

@@ -78,6 +78,16 @@ require('oil').setup({
 require('CopilotChat').setup{}
 
 
+---------- Tabular ----------
+vim.g.no_default_tabular_maps = 1
+
+vim.keymap.set({'n', 'v'}, [[\|]], [[<Cmd>Tabularize /\|/l1<CR>]])
+vim.keymap.set({'n', 'v'}, [[\:]], [[<Cmd>Tabularize /^.\{-}:\zs/l0l1<CR>]])
+vim.keymap.set({'n', 'v'}, [[\=]], [[<Cmd>Tabularize /^.\{-}\zs=/l1<CR>]])
+vim.keymap.set({'n', 'v'}, [[\,]], [[<Cmd>Tabularize /,\zs/l0l1<CR>]])
+vim.keymap.set({'n', 'v'}, [[\<Space>]], [[<Cmd>Tabularize /[^ ]\+\zs /l0<CR>]])
+
+
 ---------- local vimrc ----------
 if vim.loop.fs_stat(vim.fn.stdpath('config') .. '/lua/init_local.lua') then
 	require('init_local')
