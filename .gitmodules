@@ -82,3 +82,6 @@
 [submodule "nvim/pack/common/start/vim-fugitive"]
 	path = nvim/pack/common/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "nvim/pack/common/start/vim-gnupg"]
+	path = nvim/pack/common/start/vim-gnupg
+	url = https://github.com/jamessan/vim-gnupg.git
