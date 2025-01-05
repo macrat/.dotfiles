@@ -54,21 +54,6 @@ vim.filetype.add {
 ---------- Telescope.nvim ----------
 vim.keymap.set('n', '<C-p>', ':Telescope find_files<CR>')
 
----------- Obsidian.nvim ----------
-require('obsidian').setup({
-    workspaces = {
-        {
-            name = 'notes',
-            path = '~/notes',
-        },
-    },
-
-    daily_notes = {
-		folder = "daily",
-		default_tags = { "daily" },
-    },
-})
-
 ---------- Oil.nvim ----------
 require('mini.icons').setup()
 require('oil').setup({
