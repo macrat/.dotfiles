@@ -13,7 +13,6 @@ ln $OPTS $PWD/zshenv ~/.zshenv
 ln $OPTS $PWD/gitconfig ~/.gitconfig
 ln $OPTS $PWD/gitignore ~/.gitignore
 
-ln $OPTS $PWD/vim ~/.vim
 ln $OPTS $PWD/nvim ~/.config/nvim
 
 ln $OPTS $PWD/tmux.conf ~/.tmux.conf

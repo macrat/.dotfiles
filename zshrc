@@ -96,25 +96,6 @@ esac
 
 
 # application settings
-if [ "${VIM_SERVERNAME}" != '' ]; then
-    function vimdo() {
-        \vim --servername "${VIM_SERVERNAME}" --remote-send "<C-l>:$*<CR>"
-    }
-    function cd() {
-        builtin cd "$*" && vimdo lcd "$(pwd)"
-    }
-    function flatvim() {
-        if [ "$*" != '' ]; then
-            vimdo args "$@"
-        else
-            vimdo enew
-        fi
-    }
-    alias vi=flatvim
-    alias vim=flatvim
-    trap 'vimdo "setl bufhidden="' EXIT
-fi
-
 if [ "${NVIM_SERVERNAME}" != '' ]; then
 	function :execute() {
 		\nvim --server "${NVIM_SERVERNAME}" --headless --remote-send "<CMD>:$*<CR>"
