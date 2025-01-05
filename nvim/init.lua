@@ -17,6 +17,12 @@ vim.opt.updatetime = 100
 
 -- Terminal
 vim.keymap.set({'t', 'n'}, '<Esc>', '<C-\\><C-n>')
+vim.api.nvim_create_autocmd('TermOpen', {
+	callback = function()
+		vim.cmd('startinsert')
+	end,
+})
+vim.env.NVIM_SERVERNAME = vim.v.servername
 
 -- Data
 vim.opt.undofile = true
