@@ -76,3 +76,9 @@
 [submodule "nvim/pack/common/start/tabular"]
 	path = nvim/pack/common/start/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "nvim/pack/common/start/vim-gitgutter"]
+	path = nvim/pack/common/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "nvim/pack/common/start/vim-fugitive"]
+	path = nvim/pack/common/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
