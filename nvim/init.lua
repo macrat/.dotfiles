@@ -19,7 +19,10 @@ vim.opt.updatetime = 100
 vim.keymap.set({'t', 'n'}, '<Esc>', '<C-\\><C-n>')
 vim.api.nvim_create_autocmd('TermOpen', {
 	callback = function()
-		vim.cmd('startinsert')
+		vim.cmd[[
+			startinsert
+			setl signcolumn=no
+		]]
 	end,
 })
 vim.env.NVIM_SERVERNAME = vim.v.servername
