@@ -7,7 +7,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	quotepath = false
-	editor = ~/.dotfiles/flatvim
+	editor = nvim
 [diff]
 	tool = vimdiff
 [difftool]
