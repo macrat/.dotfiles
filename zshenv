@@ -16,8 +16,8 @@ export GOBIN="$HOME/.local/bin"
 export PIPENV_VENV_IN_PROJECT=true
 export PIPENV_CACHE_DIR=${XDG_RUNTIME_DIR:-/tmp}/pipenv-cache
 
-# mpd
-export MPD_HOST='/var/lib/mpd/socket'
+## editor
+export EDITOR=nvim
 
 
 # local settings
