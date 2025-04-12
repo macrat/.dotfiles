@@ -23,3 +23,7 @@ fi
 
 mkdir -p ~/.config/wezterm
 ln $OPTS $PWD/wezterm.lua ~/.config/wezterm/wezterm.lua
+
+
+cd $PWD/nvim/pack/common/start/markdown-preview.nvim
+npm install
