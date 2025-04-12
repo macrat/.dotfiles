@@ -37,3 +37,6 @@
 [submodule "nvim/pack/common/start/vim-gnupg"]
 	path = nvim/pack/common/start/vim-gnupg
 	url = https://github.com/jamessan/vim-gnupg.git
+[submodule "nvim/pack/common/start/markdown-preview.nvim"]
+	path = nvim/pack/common/start/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim.git
