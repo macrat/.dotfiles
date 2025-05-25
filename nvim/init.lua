@@ -10,8 +10,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Display
-vim.opt.conceallevel = 2
-vim.opt.concealcursor = 'n'
+vim.opt.conceallevel = 0
 vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 100
 
