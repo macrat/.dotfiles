@@ -24,6 +24,8 @@ fi
 mkdir -p ~/.config/wezterm
 ln $OPTS $PWD/wezterm.lua ~/.config/wezterm/wezterm.lua
 
+mkdir -p ~/.config/alacritty
+ln $OPTS $PWD/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 cd $PWD/nvim/pack/common/start/markdown-preview.nvim
 npm install
