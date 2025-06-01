@@ -3,6 +3,7 @@
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.smartindent = true
+vim.opt.expandtab = true
 
 -- Search
 vim.opt.hlsearch = false
@@ -32,15 +33,34 @@ vim.opt.undodir = vim.fn.stdpath('data') .. '/undo'
 vim.opt.backup = false
 
 
----------- LSP ----------
-require('lspconfig').cssls.setup{}  -- vscode-css-languageserver
-require('lspconfig').gopls.setup{}  -- gopls
-require('lspconfig').html.setup{}   -- vscode-html-languageserver
-require('lspconfig').lua_ls.setup{} -- lua-language-server
-require('lspconfig').pylsp.setup{}  -- python-lsp-server
-require('lspconfig').ts_ls.setup{}  -- typescript-language-server
-require('lspconfig').vacuum.setup{} -- vacuum
+---------- File type ----------
+vim.cmd[[
+	au FileType markdown setlocal sw=2 ts=2
+	au FileType javascript,typescript,javascriptreact,typescriptreact,svelte setlocal sw=2 ts=2
+	au FileType html,css setlocal sw=2 ts=2
+	au FileType json,yaml setlocal sw=2 ts=2
+	au FileType go setlocal noet
+]]
 
+
+---------- LSP ----------
+local servers = {
+	{'cssls', 'vscode-css-languageserver'},
+	{'gopls', 'gopls'},
+	{'html', 'vscode-html-languageserver'},
+	{'lua_ls', 'lua-language-server'},
+	{'pylsp', 'python-lsp-server'},
+	{'ts_ls', 'typescript-language-server'},
+	{'vacuum', 'vacuum'},
+}
+for _, server in ipairs(servers) do
+	local name, cmd = unpack(server)
+	if vim.fn.executable(cmd) then
+		vim.lsp.enable(name)
+	end
+end
+
+-- add filetypes for vacuum
 vim.filetype.add {
 	pattern = {
 		['.*%.schema%.json'] = 'json.openapi',
@@ -94,3 +114,5 @@ vim.keymap.set({'n', 'v'}, [[\<Space>]], [[:Tabularize /[^ ]\+\zs /l0<CR>]])
 if vim.loop.fs_stat(vim.fn.stdpath('config') .. '/lua/init_local.lua') then
 	require('init_local')
 end
+
+-- vim: ts=4 sw=4 noet
