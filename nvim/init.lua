@@ -73,14 +73,15 @@ vim.filetype.add {
 }
 
 ---------- nvim-treesitter ----------
-require('nvim-treesitter.configs').setup {
-	auto_install = true,
-	sync_install = false,
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
-	},
-}
+vim.api.nvim_create_autocmd('FileType', {
+	callback = function()
+		vim.treesitter.start()
+		vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+		vim.wo.foldmethod = 'expr'
+		vim.wo.foldlevel = 99
+		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+	end,
+})
 
 ---------- Telescope.nvim ----------
 vim.keymap.set('n', '<C-p>', ':Telescope find_files<CR>')
