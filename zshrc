@@ -125,7 +125,12 @@ if [ "${NVIM_SERVERNAME}" != '' ]; then
 	alias vi=flatnvim
 	alias vim=flatnvim
 	alias nvim=flatnvim
+	alias view=flatnvim
 	alias :e=flatnvim
+else
+	alias vi='nvim'
+	alias vim='nvim'
+	alias view='nvim -R'
 fi
 
 
