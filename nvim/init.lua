@@ -73,9 +73,12 @@ vim.filetype.add {
 }
 
 ---------- nvim-treesitter ----------
+require('nvim-treesitter').setup{
+}
 vim.api.nvim_create_autocmd('FileType', {
 	callback = function()
-		if vim.bo.filetype == 'oil' then
+		ok, _ = pcall(vim.treesitter.language.inspect, vim.bo.filetype)
+		if not ok then
 			return
 		end
 
